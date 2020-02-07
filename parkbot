@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+JSON=${1?Error: no JSON given}
+COMMAND=${2?Error: no COMMAND given}
+ARGUMENT=${3?Error: no argument given}
+
+node app.js $JSON $COMMAND $ARGUMENT
