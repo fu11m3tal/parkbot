@@ -8,23 +8,21 @@ class ParkBot {
   constructor() {
     this.command = command;
     this.argument = argument;
-    this.spots = []
   }
   execute() {
-    this[command](argument)
-    console.log(this.spots.join(', '));
+    console.log(this[command](argument).join(", "));
   }
   locate(state) {
     const result = data.filter(garage => garage.address.state === state).map(garage => `${garage.name}`);
-    this.spots = result;
+    return result;
   }
   find_price_hourly_lte(price) {
     const result = data.filter(garage => garage.price_hourly <= price).map(garage => `${garage.name}`);
-    this.spots = result;
+    return result;
   }
   find_price_hourly_gt(price) {
     const result = data.filter(garage => garage.price_hourly > price).map(garage => `${garage.name}`);
-    this.spots = result;
+    return result;
   }
 }
 
