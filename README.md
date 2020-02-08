@@ -6,8 +6,8 @@
 
 1. [Requirements](#Requirements)
 1. [Installation](#Installation)
-1. [Commands](#Commands)
 1. [Execution](#Execution)
+1. [Commands](#Commands)
 
 
 ## Requirements
@@ -30,7 +30,23 @@ Make parkbot commands executable
 chmod +x parkbot 
 ```
 
+## Execution
+From within the root directory:
+
+Parkbot is executable accepting three arguments with a single space seperating each value (`JSON`, `command`, `argument`).
+
+Format Template:
+```
+./parkbot [JSON] [command] [argument]
+```
+JSON File Name: 
+```sh
+airgarage-data.json
+```
+
 ## Commands
+
+List of commands that take in an argument and query the JSON file  returning matches via console.
 
 - ***locate:*** Returns a list of spot names by location (state only).
      
@@ -40,17 +56,7 @@ chmod +x parkbot
 
 | Command                   | Argument  | Type      | Example                                                |
 | ------------------------- |:--------- | :-------- | :----------------------------------------------------- |
-| locate                    |  state    | `String`  | ./parkbot airgarage-data.json locate AZ                |
-| find_price_hourly_lte     |  cents    | `Number`  | ./parkbot airgarage-data.json find_price_hourly_lte AZ |
-| find_price_hourly_gt      |  cents    | `Number`  | ./parkbot airgarage-data.json find_price_hourly_gt AZ  |
+| `locate`                   |  ***state***    | String  | ./parkbot airgarage-data.json `locate` AZ                |
+| `find_price_hourly_lte`     |  ***cents***    | Number  | ./parkbot airgarage-data.json `find_price_hourly_lte` ***100*** |
+| `find_price_hourly_gt`      |  ***cents***    | Number  | ./parkbot   airgarage-data.json `find_price_hourly_gt` ***200***  |
 
-## Execution
-From within the root directory:
-
-Parkbot is executable taking in three arguments with a single space seperating each value (`JSON`, `command`, `argument`).
-
-Format Template: "./parkbot  `JSON`   `command`   `argument`
-Format Example: "./parkbot airgarage-data.json locate AZ"
-
-JSON File Name: "airgarage-data.json"
-Commands: "locate", "find_price_hourly_lte", "find_price_hourly_gt"
