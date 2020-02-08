@@ -1,11 +1,9 @@
 {
-  "name": "application-name",
+  "name": "ParkBot",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": " parkbot/app.js"
   },
-  "dependencies": {
-    
-  }
+  "dependencies": {}
 }

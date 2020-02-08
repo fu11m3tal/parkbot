@@ -23,7 +23,7 @@ class ParkBot {
     this.spots = result;
   }
   find_price_hourly_gt(price) {
-    const result = data.filter(garage => garage.price_hourly >= price).map(garage => `${garage.name}`);
+    const result = data.filter(garage => garage.price_hourly > price).map(garage => `${garage.name}`);
     this.spots = result;
   }
 }
