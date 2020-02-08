@@ -33,7 +33,7 @@ chmod +x parkbot
 ## Execution
 From within the root directory:
 
-Parkbot is executable accepting three arguments with a single space seperating each value (`JSON`, `command`, `argument`).
+Parkbot is executable accepting three arguments with a single space seperating each input (`JSON`, `command`, `argument`).
 
 Format Template:
 ```
